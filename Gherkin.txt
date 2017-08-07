@@ -1,0 +1,34 @@
+Feature: Creating Google Account
+
+As a non-authorized user
+I want to have the ability to sign up the google account
+Scenario: Registration on Google Account
+Given I navigate to 'https://accounts.google.com/SignUp?service=mail&continue=https://mail.google.com/mail/?pc=topnav-about-en'
+When I input my First Name into 'FirstName' field
+| FirstName | Oksana |
+And I input my Last Name into 'LastName' field
+| LastName | Talan |
+And I input my gmail adress into 'GmailAddress' field
+| GmailAdress | oksoksa123@gmail.com |
+And I input valid password into 'create a password' field
+| Create a password | ooo12345678 |
+And I repeat my password in 'Confirm your password' field
+| Confirm your password | ooo12345678 |
+And I input my day into 'BirthDay' field
+| BirthDay | 25 |
+And I input my year of birthday into 'BirthYear' field
+| BirthYear | 1991 |
+And I select my birthday month from 'BirthMonth' drop-down menu
+| BirthMonth | October |
+And I select my gender from 'Gender' drop-down menu
+| Gender | Female |
+And I input my mobile phone number into 'Mobile phone' field
+| Mobile Phone | +380939341513 |
+And I click on 'Next step' button
+Then 'Terms of Use' popup is displayed
+And I click on 'Scroll down' button
+And I click on 'I agree' button
+Then 'Confirm Account' page is displayed
+And I click on 'Continue' button
+Then confirmation password is sent on mobile phone
+
